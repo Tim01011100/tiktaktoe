@@ -75,7 +75,7 @@
     // Spielerzug durchführen
     function playerMove(index) {
       if (cells[index] || gameOver) return; // Keine Aktion wenn Feld besetzt oder Spiel vorbei
-      cells[index] = 'Ö'; // Spieler ist X
+      cells[index] = 'O'; // Spieler ist X
       checkGameEnd(); // Prüfe Spielstatus
       if (!gameOver) setTimeout(botMove, 300); // Bot zieht mit kleiner Verzögerung
       renderBoard(); // Aktualisiere Anzeige
@@ -89,7 +89,7 @@
 
       // Wähle zufälliges freies Feld
       let move = emptyIndices[Math.floor(Math.random() * emptyIndices.length)];
-      cells[move] = 'Ö'; // Bot ist O
+      cells[move] = 'O'; // Bot ist O
       checkGameEnd();
       renderBoard();
     }
