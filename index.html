@@ -89,7 +89,7 @@
 
       // Wähle zufälliges freies Feld
       let move = emptyIndices[Math.floor(Math.random() * emptyIndices.length)];
-      cells[move] = 'O'; // Bot ist O
+      cells[move] = 'X'; // Bot ist O
       checkGameEnd();
       renderBoard();
     }
